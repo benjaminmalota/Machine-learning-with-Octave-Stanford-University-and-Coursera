@@ -15,26 +15,14 @@ function [theta, J_history] = gradientDescent(X, y, theta, alpha, num_iters)
    %
    % Hint: While debugging, it can be useful to print out the values
    %       of the cost function (computeCost) and gradient here.
-   %
 
-   %%%%%%%%% CORRECT %%%%%%%
-   %error = (X * theta) - y;
-   %temp0 = theta(1) - ((alpha/m) * sum(error .* X(:,1)));
-   %temp1 = theta(2) - ((alpha/m) * sum(error .* X(:,2)));
-   %theta = [temp0; temp1];
-   %%%%%%%%%%%%%%%%%%%%%%%%%
 
-   %%%%%%%%% CORRECT %%%%%%%
-   %error = (X * theta) - y;
-   %temp0 = theta(1) - ((alpha/m) * X(:,1)'*error);
-   %temp1 = theta(2) - ((alpha/m) * X(:,2)'*error);
-   %theta = [temp0; temp1];
-   %%%%%%%%%%%%%%%%%%%%%%%%%
+   
 
-   %%%%%%%%% CORRECT %%%%%%%
+   
    error = (X * theta) - y;
    theta = theta - ((alpha/m) * X'*error);
-   %%%%%%%%%%%%%%%%%%%%%%%%%
+  
 
    % ============================================================
 
